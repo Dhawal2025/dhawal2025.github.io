@@ -1,84 +1,187 @@
-@charset "UTF-8";
-@font-face {
-  font-family: 'fontello';
-  src: url("../font/fontello.eot?26793073");
-  src: url("../font/fontello.eot?26793073#iefix") format("embedded-opentype"), url("../font/fontello.woff2?26793073") format("woff2"), url("../font/fontello.woff?26793073") format("woff"), url("../font/fontello.ttf?26793073") format("truetype"), url("../font/fontello.svg?26793073#fontello") format("svg");
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.cir_img{
+  border-radius: 80%;
+}
+main {
+  margin: 0 90px;
+  display: flex;
+  height: 100%;
+}
+
+main .about {
+  display: flex;
+  height: 100vh;
+  padding-bottom: 15vh;
+  min-width: 220px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .about img {
+  max-width: 200px;
+}
+/* a{
+  color:blue;
+} */
+#iit{
+  margin-right: 3px;
+}
+main .about h2 {
+  font-size: 22px;
+  margin-top: 25px;
+  margin-bottom: 0;
+  color: #222222;
   font-weight: normal;
-  font-style: normal; }
-[class^="icon-"]:before, [class*=" icon-"]:before {
-    font-family: "fontello";
-    font-style: normal;
-    font-weight: normal;
-    speak: none;
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    margin-right: .2em;
-    text-align: center;
-    /* opacity: .8; */
-    /* For safety - reset parent styles, that can break glyph codes*/
-    font-variant: normal;
-    text-transform: none;
-    /* fix buttons height, for twitter bootstrap */
-    line-height: 1em;
-    /* Animation center compensation - margins should be symmetric */
-    /* remove if not needed */
-    margin-left: .2em;
-    /* you can be more comfortable with increased icons size */
-    /* font-size: 120%; */
-    /* Font smoothing. That was taken from TWBS */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    /* Uncomment for 3D effect */
-    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
-    .icon-github-circled:before {
-        content: '\f09b'; }
-      
-      /* '' */
-      .icon-twitter-squared:before {
-        content: '\f304'; }
-      
-      /* '' */
-      .icon-linkedin-squared:before {
-        content: '\f30c'; }
-
-.wrapper{
-    margin:5 auto;
-    max-width: 1000px;
-}
-.title{
-    color: #222222;
-    font-weight: 400;
-    font-family: Raleway;
-    margin-top: 5px;
-    font-size:30px;
-    margin-bottom: 0px;
-
 }
 
-.mar{
-    margin-top: 40px;
-    margin-bottom: 10px;
+.gf{
+  margin-left: 20px;
+  margin-right:20px;
+  margin-bottom: 20px;
+}
+h2{
+  margin: 0.7em 0;
+  line-height: 1.5em;
 }
 
+main .about .tagline {
+  font-size: 22px;
+  margin-top: 17px;
+  color: #aaa;
+  white-space: pre-wrap;
+  line-height: normal;
+}
 
-.tagline {
-      font-size: 20px;
-      margin-top: 0px;
-      /* padding-left : 30px; */
-      font-family: Raleway;
-      color: #aaa;
-      white-space: pre-wrap;
-      line-height: normal; 
-    }
+#title a {
+  text-decoration: none;
+}
 
-    .social {
-        list-style-type: none;
-        padding: 0;
-        margin-top: 0; }
-        .social li {
-          float: left; }
-          .social li i {
-            font-size: 34px; }
-            
-              
+.social {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+.social li {
+  float: left;
+  margin: 0 0.2em;
+}
+
+.social li i {
+  font-size: 34px;
+}
+
+.fa .fa-linkedin-square:before {
+  content: '\f30c';
+}
+
+.fa .fa-github:before {
+  content: '\f09b';
+}
+
+a {
+  color: #000;
+  transition: color 0.3s;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #0a59b0;
+}
+
+.posts, .post-container {
+  list-style-type: none;
+  margin: 45px 30px;
+}
+
+img, embed, object, video {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+  line-height: 0.8em;
+}
+
+#posts-label {
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-bottom: 10px;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 1600px){
+  main {
+      margin: 0 auto;
+      max-width: 1440px;
+  }
+}
+
+@media screen and (max-width: 1280px){
+  main {
+    margin: 0 75px;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  main {
+    margin: 0 35px;
+  }
+}
+
+@media screen and (min-width: 769px){
+  main .about {
+    position: fixed;
+  }
+  main .content {
+    max-width: calc(100% - 220px);
+    margin-left: 220px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  main {
+      margin: 0 10px;
+      flex-direction: column;
+  }
+  main .about {
+    height: auto;
+    padding: 10vh 0;
+  }
+  .posts, .post-container {
+    padding: 0 !important;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 480px){
+  main {
+    margin: 0;
+  }
+  .posts, .post-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
